@@ -1,0 +1,10 @@
+#techspecs thead tr th {
+font-size: 32px;
+font-family: open_sanslight;
+}
+
+#techspecs tbody tr td:first-child {
+font-size: 1.2857em;
+font-family: open_sanslight;
+width: 35%;
+}

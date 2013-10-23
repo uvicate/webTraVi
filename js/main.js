@@ -119,17 +119,10 @@ window.dhtmlHistory.create({
 		parent.innerHTML = '';
 
 		var container = document.createElement('div');
-		container.id = 'bio-container';
+		container.id = 'web_travi-container';
 		parent.appendChild(container);
 
-		var menuHolder = document.createElement('div');
-		menuHolder.id = 'menuHolder';
-		menuHolder.className = 'navbar navbar-default';
-		container.appendChild(menuHolder);
-
-		var menu = this.subMenuCreator(category);
-		menuHolder.appendChild(menu);
-
+	
 		var contentHolder = document.createElement('div');
 		contentHolder.id = 'contentHolder';
 		container.appendChild(contentHolder);
