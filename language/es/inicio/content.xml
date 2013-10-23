@@ -1,0 +1,17 @@
+<content>
+	<dom>
+		<heading_carousel_1>Titulo 1</heading_carousel_1>
+		<p_carousel_1></p_carousel_1>
+		<heading_carousel_2>Titulo 2</heading_carousel_2>
+		<p_carousel_2>Parrafo 2</p_carousel_2>
+		<heading_carousel_3></heading_carousel_3>
+		<p_carousel_3></p_carousel_3>
+
+		<heading_1>Heading 1</heading_1>
+		<marketing_1>prueba 1</marketing_1>
+		<heading_2>Heading 2</heading_2>
+		<marketing_2>prueba de texto 2</marketing_2>
+		<heading_3>Heading 3</heading_3>
+		<marketing_3>prueba de texto 3</marketing_3>
+	</dom>
+</content>

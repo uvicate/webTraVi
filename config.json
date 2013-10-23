@@ -1,0 +1,9 @@
+{
+	"modules": {
+		"inicio":"", 
+		"caracteristicas":"",
+		"especificaciones_tecnicas":"", 
+		"contacto":""
+	},
+	"modules_path": "modules/"
+}
