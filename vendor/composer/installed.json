@@ -1,43 +1,5 @@
 [
     {
-        "name": "uvicate/webapp",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/uvicate/WebApp.git",
-            "reference": "8f00b102595eb8f420197643a6ba71dc8aec090d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/uvicate/WebApp/zipball/8f00b102595eb8f420197643a6ba71dc8aec090d",
-            "reference": "8f00b102595eb8f420197643a6ba71dc8aec090d",
-            "shasum": ""
-        },
-        "time": "2013-09-29 20:17:41",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Victor Quiroz",
-                "email": "victorhqc@gmail.com",
-                "homepage": "http://victorhqc.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Creating and manage Ajax-Translatable Applications",
-        "homepage": "https://github.com/uvicate/WebApp",
-        "keywords": [
-            "ajax",
-            "translate",
-            "webapp"
-        ]
-    },
-    {
         "name": "twitter/bootstrap",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -74,6 +36,44 @@
         "keywords": [
             "bootstrap",
             "css"
+        ]
+    },
+    {
+        "name": "uvicate/webapp",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/uvicate/WebApp.git",
+            "reference": "8f00b102595eb8f420197643a6ba71dc8aec090d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/uvicate/WebApp/zipball/8f00b102595eb8f420197643a6ba71dc8aec090d",
+            "reference": "8f00b102595eb8f420197643a6ba71dc8aec090d",
+            "shasum": ""
+        },
+        "time": "2013-09-29 20:17:41",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Victor Quiroz",
+                "email": "victorhqc@gmail.com",
+                "homepage": "http://victorhqc.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Creating and manage Ajax-Translatable Applications",
+        "homepage": "https://github.com/uvicate/WebApp",
+        "keywords": [
+            "ajax",
+            "translate",
+            "webapp"
         ]
     }
 ]
