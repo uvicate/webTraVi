@@ -6,8 +6,8 @@
 		<contacto>Soporte</contacto>
 		<adquirir><![CDATA[<button class="btn btn-consulta">¡Adquierelo ahora!</button>]]></adquirir>
 		<iniciar_sesion><![CDATA[<span class="login">Iniciar sesión</span>]]></iniciar_sesion>
-		<copyright>  Soluciones uVicate S.A. de C.V. © 2013  </copyright>
-		<mail>  contacto@uvicate.com  </mail>
-		<phone>  01.800.500.CREA</phone>
+		<copyright><![CDATA[Soluciones uVicate S.A. de C.V. © 2013  ]]></copyright>
+		<mail><![CDATA[|  <i class="glyphicon glyphicon-envelope"></i>  contacto@uvicate.com  |  ]]></mail>
+		<phone><![CDATA[<i class="glyphicon glyphicon-phone-alt"></i> 01 800 500 CREA (2732)]]></phone>
 	</dom>
 </content>
