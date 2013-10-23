@@ -4,6 +4,7 @@
 		"caracteristicas":"",
 		"especificaciones_tecnicas":"", 
 		"contacto":"",
+		"iniciar_sesion":{"href": "http://www.misofom.com"},
 		"adquirir":""
 	},
 	"modules_path": "modules/"

@@ -14,3 +14,15 @@ vendor/autoload.php
 composer.lock
 
 composer.lock
+
+vendor/composer/installed.json
+
+vendor/composer/installed.json
+
+vendor/composer/autoload_real.php
+
+vendor/composer/autoload_real.php
+
+vendor/autoload.php
+
+vendor/autoload.php

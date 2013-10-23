@@ -12,6 +12,17 @@ background: url('http://www.colorhexa.com/static/i/linen.png') repeat;
 	font-style: normal;
 }
 
+.navbar-default .navbar-nav>.active>a[data-module="adquirir"] {
+background: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a[data-module="iniciar_sesion"] {
+background: transparent;
+}
+.nav.navbar-nav.navbar-right.main-menu li {
+cursor: pointer;
+}
+
 #head-container {
 background: white;
 }
@@ -24,6 +35,12 @@ border-color: #BDBDBD;
 .navbar-fixed-top {
 top: 0;
 border-width: 0 0 3px;
+}
+
+.btn.btn-consulta {
+margin-top: -15px;
+margin-bottom: -15px;
+padding: 15px 15px;
 }
 
 .container{
@@ -96,4 +113,15 @@ margin-bottom: 30px;
 margin-right: 45px;
 margin-left: 45px;
 
+}
+
+.login{
+
+color:#245dc1;
+
+}
+
+.login:hover{
+
+text-decoration: underline;
 }
