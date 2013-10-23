@@ -78,11 +78,12 @@ transition: all .4s ease;
 }
 
 #footer.container {
+	padding-bottom: 50px;
 background: transparent;
 }
 
 .carousel-caption {
-
+	text-align: left;
 bottom: 130px;
 
 }
