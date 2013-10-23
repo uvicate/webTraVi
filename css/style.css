@@ -121,6 +121,11 @@ color:#245dc1;
 
 }
 
+.btn-consulta:hover {
+background: #a1db80!important;
+border: 0;
+}
+
 .login:hover{
 
 text-decoration: underline;
