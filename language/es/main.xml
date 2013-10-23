@@ -3,7 +3,10 @@
 		<inicio>Inicio</inicio>
 		<caracteristicas>Características</caracteristicas>
 		<especificaciones_tecnicas>Especificaciones tecnicas</especificaciones_tecnicas>+
-		<contacto>Contacto</contacto>
-		<copyright>Soluciones uVicate SA de CV © 2013</copyright>
+		<contacto>Soporte</contacto>
+		<adquirir><![CDATA[<button class="btn btn-consulta">Adquierelo ahora!</button>]]></adquirir>
+		<copyright>  Soluciones uVicate S.A. de C.V. © 2013  </copyright>
+		<mail>  contacto@uvicate.com  </mail>
+		<phone>  01.800.500.CREA</phone>
 	</dom>
 </content>

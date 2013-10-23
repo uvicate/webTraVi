@@ -3,7 +3,8 @@
 		"inicio":"", 
 		"caracteristicas":"",
 		"especificaciones_tecnicas":"", 
-		"contacto":""
+		"contacto":"",
+		"adquirir":""
 	},
 	"modules_path": "modules/"
 }
