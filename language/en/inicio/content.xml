@@ -1,4 +1,17 @@
 <content>
 	<dom>
+		<heading_carousel_1>Administra tu SOFOM desde cualquier dispositivo y en cualquier momento</heading_carousel_1>
+		<p_carousel_1></p_carousel_1>
+		<heading_carousel_2>TraVi te ayuda a cumplir tus obligaciones ante los diferentes órganos supervisores</heading_carousel_2>
+		<p_carousel_2></p_carousel_2>
+		<heading_carousel_3>Obtén la información necesaria para la dirección de tu SOFOM</heading_carousel_3>
+		<p_carousel_3></p_carousel_3>
+
+		<heading_1>Todo en uno</heading_1>
+		<marketing_1>Controla el perfil transaccional de tus clientes, tus créditos  y cumple siempre con los lineamientos de los diferentes órganos supervisores.</marketing_1>
+		<heading_2>Modular</heading_2>
+		<marketing_2>Da acceso controlado a tu personal en los diferentes módulos del sistema.</marketing_2>
+		<heading_3>Amigable</heading_3>
+		<marketing_3>Controla tu SOFOM sin perder el enfoque en lo que realmente importa.</marketing_3>
 	</dom>
 </content>
