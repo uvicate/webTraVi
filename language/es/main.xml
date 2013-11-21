@@ -1,13 +1,9 @@
 <content>
 	<dom>
 		<inicio>Inicio</inicio>
-		<caracteristicas>Características</caracteristicas>
-		<especificaciones_tecnicas>Especificaciones tecnicas</especificaciones_tecnicas>+
-		<contacto>Soporte</contacto>
-		<adquirir><![CDATA[<button class="btn btn-consulta">¡Adquierelo ahora!</button>]]></adquirir>
-		<iniciar_sesion><![CDATA[<span class="login">Iniciar sesión</span>]]></iniciar_sesion>
-		<copyright><![CDATA[Soluciones uVicate S.A. de C.V. © 2013  ]]></copyright>
-		<mail><![CDATA[|  <i class="glyphicon glyphicon-envelope"></i>  contacto@uvicate.com  |  ]]></mail>
-		<phone><![CDATA[<i class="glyphicon glyphicon-phone-alt"></i> 01 800 500 CREA (2732)]]></phone>
+		<caracteristicas>Caracteristicas</caracteristicas>
+		<especificaciones>Especificaciones tecnicas</especificaciones>
+		<soporte>Soporte</soporte>
+		<adquirir><![CDATA[<i class="glyphicon glyphicon-shopping-cart" style="color:#1cad67;"></i><span style="color:#1cad67;">  Adquierelo ahora</span>]]></adquirir>
 	</dom>
 </content>

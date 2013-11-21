@@ -1,11 +1,12 @@
 {
 	"modules": {
-		"inicio":"", 
-		"caracteristicas":"",
-		"especificaciones_tecnicas":"", 
-		"contacto":"",
-		"iniciar_sesion":{"href": "http://www.misofom.com"},
-		"adquirir":""
+		"inicio": {},
+		"caracteristicas": {},
+		"especificaciones": {},
+		
+		"adquirir": {}
+		
+		
 	},
-	"modules_path": "modules/"
+	"modules_path":"modules/"
 }

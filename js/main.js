@@ -12,14 +12,14 @@ window.dhtmlHistory.create({
 (function(window){
 	"use strict";
 
-	var web_travi = function(){
+	var Bioteksa = function(){
 		var t = this;
 		this.initialize(function(r){
 			t.setupApp(r);
 		});
 	}
 
-	web_travi.prototype.initialize = function(callback) {
+	Bioteksa.prototype.initialize = function(callback) {
 		new Vi({url:'config.json', response: 'object'}).server(function(r){
 			if(typeof callback === 'function'){
 				callback(r);
@@ -27,11 +27,11 @@ window.dhtmlHistory.create({
 		});
 	};
 
-	web_travi.prototype.setupApp = function(r) {
+	Bioteksa.prototype.setupApp = function(r) {
 		var modules = r.modules;
 		var lang = this.browserLanguage();
 
-		var j = {modules: {}, name: 'web_travi', div: '#main', currentLang: lang};
+		var j = {modules: {}, name: 'Bioteksa', div: '#main', currentLang: lang};
 		for(var m in modules){
 			if(modules.hasOwnProperty(m)){
 				j.modules[m] = {nombre: m, url:r.modules_path};
@@ -49,6 +49,7 @@ window.dhtmlHistory.create({
 
 		this.buildMenu();
 		this.a.init(function(){
+			t.backgroundGenerator();
 			t.loadSystem();
 
 			var alogo = document.getElementById('a-logo');
@@ -60,7 +61,7 @@ window.dhtmlHistory.create({
 		});
 	};
 
-	web_travi.prototype.loadSystem = function() {
+	Bioteksa.prototype.loadSystem = function() {
 		var initialModule = dhtmlHistory.getCurrentLocation();
 		if(initialModule.length <= 1){
 			initialModule = 'inicio';
@@ -69,13 +70,13 @@ window.dhtmlHistory.create({
 		this.loadCategory(initialModule);
 	};
 
-	web_travi.prototype.loadCategory = function(location) {
+	Bioteksa.prototype.loadCategory = function(location) {
 		var url = this.handleURL(location);
 		dhtmlHistory.add(location, {message: "Module " +url[0]});
 		this.activeMenuCategory(url[0]);
 
 		switch(url[0]){
-			case 'inicio':
+			case 'home','nosotros':
 				this.cleanMenuCategory();
 				this.automaticTransition();
 			break;
@@ -84,7 +85,7 @@ window.dhtmlHistory.create({
 			break;
 		}
 
-		var banned = {inicio: ''};
+		var banned = {inicio: '', nosotros:''};
 		this.a.getModule(url[0]);
 
 		this.a.current._url = url;
@@ -102,7 +103,24 @@ window.dhtmlHistory.create({
 		}
 	};
 
-	web_travi.prototype.containerHandler = function(category) {
+	Bioteksa.prototype.automaticTransition = function(time) {
+		if(typeof this.automatic !== 'undefined'){
+			this.disableAutomaticTransition();
+		}
+
+		time = (typeof time !== 'number') ? 10000 : time;
+
+		var t = this;
+		this.automatic = setInterval(function(){
+			t.getNextImage();
+		}, time);
+	};
+
+	Bioteksa.prototype.disableAutomaticTransition = function() {
+		clearInterval(this.automatic);
+	};
+
+	Bioteksa.prototype.containerHandler = function(category) {
 		var parent = document.querySelector(this.a._original.div);
 
 		var t = this;
@@ -115,14 +133,21 @@ window.dhtmlHistory.create({
 		});
 	};
 
-	web_travi.prototype.createContainer = function(parent, category) {
+	Bioteksa.prototype.createContainer = function(parent, category) {
 		parent.innerHTML = '';
 
 		var container = document.createElement('div');
-		container.id = 'web_travi-container';
+		container.id = 'bio-container';
 		parent.appendChild(container);
 
-	
+		var menuHolder = document.createElement('div');
+		menuHolder.id = 'menuHolder';
+		//menuHolder.className = 'navbar navbar-default';
+		container.appendChild(menuHolder);
+
+		var menu = this.subMenuCreator(category);
+		menuHolder.appendChild(menu);
+		//console.log("miau2");
 		var contentHolder = document.createElement('div');
 		contentHolder.id = 'contentHolder';
 		container.appendChild(contentHolder);
@@ -131,7 +156,7 @@ window.dhtmlHistory.create({
 		return contentHolder;
 	};
 
-	web_travi.prototype.subMenuCreator = function(module) {
+	Bioteksa.prototype.subMenuCreator = function(module) {
 		var mod = this.a._data.modules[module];
 
 		var ul = document.createElement('ul');
@@ -152,18 +177,18 @@ window.dhtmlHistory.create({
 		return ul;
 	};
 
-	web_travi.prototype.handleURL = function(url) {
+	Bioteksa.prototype.handleURL = function(url) {
 		url = url.match(/([^/]+)/gi);
 		return url;
 	};
 
-	web_travi.prototype.handleHistory = function(newLocation, historyData) {
+	Bioteksa.prototype.handleHistory = function(newLocation, historyData) {
 		if(typeof bio.a.current === 'object'){
 			bio.loadCategory(newLocation);
 		}
 	};
 
-	web_travi.prototype.backgroundGenerator = function() {
+	Bioteksa.prototype.backgroundGenerator = function() {
 		var imgs = this.a._data.images;
 		this.a._data.imgs = {};
 		this.background = document.getElementById('background');
@@ -181,24 +206,7 @@ window.dhtmlHistory.create({
 		this.images = this.a._data.imgs;
 	};
 
-	web_travi.prototype.automaticTransition = function(time) {
-		if(typeof this.automatic !== 'undefined'){
-			this.disableAutomaticTransition();
-		}
-
-		time = (typeof time !== 'number') ? 10000 : time;
-
-		var t = this;
-		this.automatic = setInterval(function(){
-			t.getNextImage();
-		}, time);
-	};
-
-	web_travi.prototype.disableAutomaticTransition = function() {
-		clearInterval(this.automatic);
-	};
-
-	web_travi.prototype.buildMenu = function() {
+	Bioteksa.prototype.buildMenu = function() {
 		this.menu = document.querySelectorAll('ul.main-menu');
 
 		for(var k = 0, len2 = this.menu.length; k < len2; k++){
@@ -206,7 +214,7 @@ window.dhtmlHistory.create({
 			menu.innerHTML = '';
 
 			var modules = Object.keys(this.a._data.modules);
-			var banned = {cart: ''};
+			var banned = {};
 
 			if(menu.id === 'side-menu'){
 				var menuWidth = $(menu).outerWidth();
@@ -227,7 +235,7 @@ window.dhtmlHistory.create({
 		}
 	};
 
-	web_travi.prototype.buildMenuCategory = function(module, menu) {
+	Bioteksa.prototype.buildMenuCategory = function(module, menu) {
 		var helperPull = '';
 		if(menu.id === 'side-menu'){
 			helperPull = 'pull-left';
@@ -266,7 +274,7 @@ window.dhtmlHistory.create({
 		return li;
 	};
 
-	web_travi.prototype.cleanMenuCategory = function() {
+	Bioteksa.prototype.cleanMenuCategory = function() {
 		var lis = document.querySelectorAll('.main-menu>li');
 		for(var i = 0, len = lis.length; i < len; i++){
 			var li = lis[i];
@@ -274,7 +282,7 @@ window.dhtmlHistory.create({
 		}
 	};
 
-	web_travi.prototype.activeMenuCategory = function(category) {
+	Bioteksa.prototype.activeMenuCategory = function(category) {
 		var elms = document.querySelectorAll('li[data-module="'+category+'"]');
 		this.cleanMenuCategory();
 		for(var i = 0, len = elms.length; i < len; i++){
@@ -283,60 +291,7 @@ window.dhtmlHistory.create({
 		}
 	};
 
-	web_travi.prototype.setCurrentImage = function(i) {
-		var fkey = Object.keys(this.images)[i];
-		var img = this.images[fkey];
-		
-		this.cImg = img; // c es por current
-		this.cFkey = fkey;
-		$(img.dom).css('z-index', 2);
-		$(img.dom).fadeIn('slow');
-	};
-
-	web_travi.prototype.prepareNextImage = function() {
-		if(typeof this.cImg !== 'undefined'){
-			$(this.cImg.dom).css('z-index', '');
-			$(this.cImg.dom).fadeOut('slow');
-		}
-	};
-
-	web_travi.prototype.getNextImage = function() {
-		this.prepareNextImage();
-
-		var keys = Object.keys(this.images);
-		var next;
-		for(var i = 0, len = keys.length; i < len; i++){
-			var k = keys[i];
-			if(this.images.hasOwnProperty(k)){
-				if(this.cFkey === k){
-					next = typeof keys[i + 1] === 'undefined' ? 0 : i + 1;
-					break;
-				}
-			}
-		}
-
-		this.setCurrentImage(next);
-	};
-
-	web_travi.prototype.getPrevImage = function() {
-		this.prepareNextImage();
-
-		var keys = Object.keys(this.images);
-		var prev;
-		for(var i = 0, len = keys.length; i < len; i++){
-			var k = keys[i];
-			if(this.images.hasOwnProperty(k)){
-				if(this.cFkey === k){
-					prev = typeof keys[i - 1] === 'undefined' ? keys.length - 1 : i - 1;
-					break;
-				}
-			}
-		}
-
-		this.setCurrentImage(prev);
-	};
-
-	web_travi.prototype.browserLanguage = function() {
+	Bioteksa.prototype.browserLanguage = function() {
 		var lang = navigator.language || navigator.userLanguage;
 		lang = lang.match(/([a-z]+)/gi);
 		if(lang !== null){
@@ -358,6 +313,6 @@ window.dhtmlHistory.create({
 		return l;
 	};
 
-	var bio = new web_travi();
+	var bio = new Bioteksa();
 	window.bio = bio;
 })(window);

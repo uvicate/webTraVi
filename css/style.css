@@ -1,135 +1,111 @@
 body {
-padding-top: 73px;
+padding-top: 100px;
+padding-bottom: 60px;
 background: url('http://www.colorhexa.com/static/i/linen.png') repeat;
-
 }
-
 @font-face {
-	font-family: 'open_sanslight';
-	src: url('opensans-light-webfont.eot');
-	src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),  url('opensans-light-webfont.woff') format('woff'),  url('opensans-light-webfont.ttf') format('truetype'),  url('opensans-light-webfont.svg#open_sanslight') format('svg');
-	font-weight: normal;
-	font-style: normal;
+        font-family: 'open_sanslight';
+        src: url('opensans-light-webfont.eot');
+        src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),  url('opensans-light-webfont.woff') format('woff'),  url('opensans-light-webfont.ttf') format('truetype'),  url('opensans-light-webfont.svg#open_sanslight') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
-.navbar-default .navbar-nav>.active>a[data-module="adquirir"] {
-background: transparent;
+header .navbar-inner {
+height: 100px;
+}
+.contact-us{
+
+float: right;
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+font-weight: 400;
+color: #bdbdbd;
+padding-right: 15px;
+line-height: 30px;
+
+}
+.logo {
+height: 54px;
+width: 138px;
+background: url('../img/inicio/logo.png') no-repeat;
+margin-top: 25px;
+background-size: 100%;
 }
 
-.navbar-default .navbar-nav>.active>a[data-module="iniciar_sesion"] {
-background: transparent;
-}
-.nav.navbar-nav.navbar-right.main-menu li {
-cursor: pointer;
-}
-
-#head-container {
+#main-container {
+border: 1px solid #ececec;
+border-radius: 4px;
 background: white;
 }
 
-.navbar-inverse {
-background-color: #f6f6f6;
-border-color: #BDBDBD;
+.footer {
+font-size: 10px;
+line-height: 10px;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+.nav.navbar-nav.navbar-right.main-menu li {
+
+	cursor: pointer;
+}
+.nav.navbar-nav.navbar-right.main-menu li a span {
+color: black;
 }
 
-.navbar-fixed-top {
-top: 0;
-border-width: 0 0 3px;
+.navbar-inner {
+background: rgba(250,250,250,0.8);
 }
 
-.btn.btn-consulta {
-margin-top: -15px;
-margin-bottom: -15px;
-padding: 15px 15px;
+
+.nav.navbar-nav li.active {
+background-color: rgba(236, 236, 236, 0.8);
+border-radius: 5px;
 }
 
-.container{
 
-	background: white;
-
+.nav.navbar-nav.navbar-right.main-menu {
+margin-top: 5px;
 }
 
-#a-logo img{
-
-padding: 10px;
-cursor: pointer;
-width: 13.5%;
-float: left;
-
+.nav>li>a:hover, .nav>li>a:focus {
+border-radius: 5px;
+background-color: #f1f1f1;
 }
 
-.btn-consulta{
+.nav.navbar-nav.navbar-right.main-menu li {
+margin-left: 10px;
+}
 
+.btn-comienza {
 color: #fff!important;
 text-shadow: 0 1px 0 rgba(0,0,0,0.1) !important;
 -webkit-box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
 -moz-box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
 box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
-background: #99ce7b;
+background: #22945d;
 border: 0;
 -webkit-transition: all .4s ease;
 -moz-transition: all .4s ease;
 -ms-transition: all .4s ease;
 -o-transition: all .4s ease;
 transition: all .4s ease;
-
-
-
+padding: 20px;
 }
 
-#footer.container {
-	padding-bottom: 50px;
-background: transparent;
+h1[id] {
+padding-top: 100px;
+margin-top: 75px;
 }
 
-.carousel-caption {
-	text-align: left;
-bottom: 130px;
-
+#car-1 {
+margin-top: -100px;
 }
 
-.carousel {
-margin-bottom: 0px;
+.scrollspy-example .page-header {
+font-family: open_sanslight;
 }
 
-.marketing .col-lg-4 {
-padding-top: 40px;
-text-align: center;
-padding-bottom: 20px;
-font-size: 15px !important;
-font-family: 'open_sanslight', Arial, sans-serif;
-}
-
-.container-wrapper{
-
-border: 1px solid #ccc;
--webkit-border-radius: 0px 0px 5px 5px;
--moz-border-radius: 0px 0px 5px 5px;
-border-radius: 0px 0px 5px 5px;
-background: #fff;
--webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.1);
--moz-box-shadow: 0 1px 8px rgba(0,0,0,0.1);
-box-shadow: 0 1px 8px rgba(0,0,0,0.1);
-margin-right: 45px;
-margin-left: 45px;
-
-}
-
-.login{
-
-color:#245dc1;
-
-}
-
-.btn-consulta:hover {
-background: #a1db80!important;
-border: 0;
-}
-
-.login:hover{
-
-text-decoration: underline;
-}
-.featuretravi .lead{
-	color:#808080;
+.page-header {
+font-family: open_sanslight;
 }
