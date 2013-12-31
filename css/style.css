@@ -1,5 +1,5 @@
 body {
-padding-top: 100px;
+padding-top: 110px;
 padding-bottom: 60px;
 background: url('http://www.colorhexa.com/static/i/linen.png') repeat;
 }
@@ -12,7 +12,7 @@ background: url('http://www.colorhexa.com/static/i/linen.png') repeat;
 }
 
 header .navbar-inner {
-height: 100px;
+height: 110px;
 }
 .contact-us{
 
@@ -29,7 +29,7 @@ line-height: 30px;
 height: 54px;
 width: 138px;
 background: url('../img/inicio/logo.png') no-repeat;
-margin-top: 25px;
+margin-top: 10px;
 background-size: 100%;
 display: block;
 }
@@ -109,4 +109,12 @@ font-family: open_sanslight;
 
 .page-header {
 font-family: open_sanslight;
+}
+
+.nav.navbar-nav.navbar-right {
+margin-top: 5px;
+}
+
+.nav.navbar-nav.navbar-right.main-menu {
+margin-top: 10px;
 }
